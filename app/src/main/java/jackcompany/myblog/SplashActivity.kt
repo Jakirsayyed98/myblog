@@ -13,7 +13,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
-
+        supportActionBar?.hide()
 
         Handler(Looper.getMainLooper()).postDelayed({
             MainActivity.openMainActivity(this)

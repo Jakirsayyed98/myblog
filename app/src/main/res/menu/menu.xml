@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single" android:id="@+id/group1">
+        <item
+            android:id="@+id/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/Latest_news"
+            android:title="Latest news" />
+
+        <item
+            android:id="@+id/ternding_news"
+            android:title="Trending news" />
+
+        <item
+            android:id="@+id/popular_news"
+            android:title="Popular News" />
+
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/group2">
+
+
+        <item
+            android:id="@+id/About"
+            android:title="About" />
+        <item
+            android:id="@+id/version"
+            android:title="version" />
+
+
+    </group>
+
+</menu>

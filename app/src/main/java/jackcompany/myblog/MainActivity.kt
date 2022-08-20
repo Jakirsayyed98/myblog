@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.ActionBarDrawerToggle
 import jackcompany.myblog.databinding.ActivityMainBinding
 import jackcompany.myblog.databinding.ActivitySplashBinding
 
@@ -21,10 +22,17 @@ class MainActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        
+        supportActionBar?.hide()
+        setUpToolbar()
         
         setContentView(binding.root)
+    }
+
+    private fun setUpToolbar() {
+        setSupportActionBar(binding.toolbar)
+        val actionBarDrawerToggle = ActionBarDrawerToggle(this,binding.drawerlayout,binding.toolbar,R.string.app_name,R.string.app_name)
+        binding.drawerlayout.addDrawerListener(actionBarDrawerToggle)
+        actionBarDrawerToggle.syncState()
     }
 }
